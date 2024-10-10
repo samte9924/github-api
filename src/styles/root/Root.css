@@ -13,7 +13,5 @@
   height: 80%;
   width: 80%;
 
-  border: 1px solid white;
-
   overflow-y: auto;
 }
