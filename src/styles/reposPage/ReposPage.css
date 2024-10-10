@@ -10,12 +10,17 @@
 
 .pagination {
   display: flex;
+  align-items: center;
 
   margin: auto auto 0 auto;
   gap: 2px;
 }
 
 .pagination button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 1rem;
   font-size: 1rem;
 
@@ -34,9 +39,20 @@
 }
 
 .pagination .previous {
+  border-radius: 0.5rem;
+
+  margin-right: 1rem;
+}
+.pagination .first {
   border-radius: 0.5rem 0 0 0.5rem;
 }
 
-.pagination .next {
+.pagination .last {
   border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.pagination .next {
+  border-radius: 0.5rem;
+
+  margin-left: 1rem;
 }
