@@ -1,3 +1,4 @@
+import "../styles/reposPage/ReposPage.css";
 import { useEffect, useState } from "react";
 import Repositories from "../components/reposPage/Repositories";
 import Spinner from "../components/Spinner";
@@ -11,10 +12,10 @@ function ReposPage() {
   const [isLoading, setIsLoading] = useState(false);
 
   const reposPerPage = 6;
-  const offset = page == 0 ? 0 : reposPerPage * (page - 1);
-  const renderedRepos = page == 0 ? 6 : reposPerPage * page;
-  const prevPage = page - 1;
-  const nextPage = page + 1;
+  const offset = Number(page) == 0 ? 0 : reposPerPage * (Number(page) - 1);
+  const renderedRepos = page == 0 ? 6 : reposPerPage * Number(page);
+  const prevPage = Number(page) - 1;
+  const nextPage = Number(page) + 1;
 
   useEffect(() => {
     const fetchUserRepositories = async () => {
@@ -45,35 +46,40 @@ function ReposPage() {
   }, [username]);
 
   const goToPrevPage = () => {
-    navigate(`users/${username}/repos/${prevPage}`);
+    navigate(`/users/${username}/repos/${prevPage}`);
   };
 
   const goToNextPage = () => {
-    navigate(`users/${username}/repos/${nextPage}`);
+    navigate(`/users/${username}/repos/${nextPage}`);
   };
 
   return (
     <>
       {!isLoading && repos ? (
-        <>
+        <div className="repos-wrapper">
           <Repositories
             repos={repos.slice(
               offset,
               repos.length < renderedRepos ? repos.length : renderedRepos
             )}
           />
-          <div>
-            <button onClick={goToPrevPage} disabled={page - 1 <= 0}>
+          <div className="pagination">
+            <button
+              onClick={goToPrevPage}
+              disabled={page - 1 <= 0}
+              className="previous"
+            >
               Prev
             </button>
             <button
               onClick={goToNextPage}
               disabled={repos.length < renderedRepos}
+              className="next"
             >
               Next
             </button>
           </div>
-        </>
+        </div>
       ) : (
         <Spinner />
       )}

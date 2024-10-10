@@ -9,6 +9,8 @@
   background-color: #242424;
 
   --primary: cornflowerblue;
+  --dark-grey: rgb(86, 86, 86);
+  --light-grey: rgb(162, 162, 162);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
