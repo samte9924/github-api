@@ -32,3 +32,15 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
 );
+
+/* To-do
+  - Breadcrumbs on top of Root page outlet
+  - Implement debounced fetch
+  - Error handling (context)
+  - global isLoading state (context)
+  - Pagination as a component
+  - Style Repository.jsx items
+  - Add card footer
+  - Center the spinner
+  - Better router structure (?)
+*/

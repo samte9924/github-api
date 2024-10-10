@@ -3,7 +3,6 @@ import { BsBoxArrowUpRight } from "react-icons/bs";
 import { IoMdPeople } from "react-icons/io";
 import { FiActivity } from "react-icons/fi";
 import { GoRepo } from "react-icons/go";
-import { FaGithub } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 
 function Profile({ user, onClick, showRecentActivities }) {
@@ -20,8 +19,9 @@ function Profile({ user, onClick, showRecentActivities }) {
         </div>
         <img src={user.avatar_url} alt="avatar" />
       </div>
+      <hr className="card-divider" />
       <div className="card-body">
-        <p>{user.bio || "Empty bio."}</p>
+        <p>{user.bio || <i>The bio is empty...</i>}</p>
         <h3>
           <IoMdPeople size={20} />
           <span>

@@ -7,6 +7,12 @@ function Root() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
 
+  const handlePressedEnter = (e) => {
+    if (e.key === "Enter" && username.length > 0) {
+      handleSubmit();
+    }
+  };
+
   const handleSubmit = () => {
     navigate(`/users/${username}`);
   };
@@ -17,8 +23,9 @@ function Root() {
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         onClick={handleSubmit}
+        onKeyUp={handlePressedEnter}
       />
-      <div className="result">
+      <div className="displayed-child">
         <Outlet />
       </div>
     </div>

@@ -8,6 +8,7 @@
   padding: 0.5rem;
 
   max-width: 50%;
+  height: 64px;
 
   background: var(--dark-grey);
 }
@@ -33,20 +34,24 @@
   border: none;
   border-radius: 50%;
 
-  margin-right: 0.2rem;
+  width: 48px;
+  height: 48px;
 
-  width: 64px;
-  height: 64px;
-
-  background: transparent;
+  background: var(--light-grey);
 
   cursor: pointer;
 }
 
+.search-bar button:focus {
+  outline: none;
+  border: 1px solid white;
+}
+
 .search-bar button:disabled {
   cursor: default;
+  opacity: 0.6;
 }
 
 .search-bar button:not(:disabled):hover {
-  background: var(--light-grey);
+  background: var(--medium-dark-grey);
 }
