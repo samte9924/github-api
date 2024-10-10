@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+
+  padding-top: 5rem;
+  gap: 5rem;
+}
+
+.result {
+  height: 80%;
+  width: 80%;
+
+  border: 1px solid white;
+
+  overflow-y: auto;
+}

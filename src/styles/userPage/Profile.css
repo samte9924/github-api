@@ -1,0 +1,31 @@
+.card {
+  width: 60%;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 1rem;
+  padding: 2rem;
+
+  background: linear-gradient(
+    135deg,
+    rgba(100, 149, 237, 0.1) 0%,
+    rgba(255, 255, 255, 0.3) 25%,
+    var(--primary) 50%,
+    rgba(100, 149, 237, 0.3) 75%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header img {
+  height: 96px;
+  width: auto;
+
+  border-radius: 50%;
+}
