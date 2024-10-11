@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import "../../styles/root/NavBar.css";
 import SearchBar from "../root/SearchBar";
 import { useState } from "react";
+import { saveToHistory } from "../../utils/saveToHistory";
 
 function NavBar() {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ function NavBar() {
   };
 
   const handleSubmit = () => {
+    saveToHistory(username);
     navigate(`/users/${username}`);
   };
   return (

@@ -13,6 +13,8 @@
   --medium-dark-grey: rgb(131, 131, 131);
   --light-grey: rgb(162, 162, 162);
 
+  --link: lightblue;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

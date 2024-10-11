@@ -17,6 +17,6 @@
 }
 
 .breadcrumbs span:last-child {
-  color: lightblue;
+  color: var(--link);
   font-size: 1.2rem;
 }

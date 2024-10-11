@@ -4,7 +4,7 @@ function Events({ events }) {
   return (
     <div className="events-list">
       {events.length === 0 ? (
-        <div>No recent event was found</div>
+        <div>No recent event was found.</div>
       ) : (
         events.map((eventItem) => (
           <div key={eventItem.id} className="event-item">

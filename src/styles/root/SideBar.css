@@ -1,32 +1,12 @@
 .sidebar {
+  width: 200px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 
   gap: 0.5rem;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 2rem 0.5rem;
 
   background: rgba(255, 255, 255, 0.1);
-}
-
-.sidebar .custom-link {
-  display: flex;
-  align-items: center;
-
-  width: 100%;
-
-  padding: 0.5rem 2rem;
-  gap: 1rem;
-
-  text-decoration: none;
-  color: inherit;
-  border-radius: 0.5rem;
-}
-
-.sidebar .custom-link:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.sidebar .custom-link.active {
-  background: var(--primary);
 }

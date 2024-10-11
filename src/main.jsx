@@ -44,7 +44,7 @@ createRoot(document.getElementById("root")).render(
 );
 
 /* To-do
-  - Breadcrumbs on top of Root page outlet
+  - Breadcrumbs on top of Root page outlet - OK
   - Implement debounced fetch
   - Implement search history
   - Error handling (context)

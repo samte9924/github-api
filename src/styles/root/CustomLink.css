@@ -1,0 +1,24 @@
+.custom-link {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 0.5rem;
+
+  gap: 1rem;
+
+  text-decoration: none;
+  color: inherit;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+}
+
+.custom-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.custom-link.active {
+  background: var(--primary);
+}
