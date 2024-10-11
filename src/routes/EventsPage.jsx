@@ -1,3 +1,4 @@
+import "../styles/eventsPage/EventsPage.css";
 import { useEffect, useState } from "react";
 import Events from "../components/eventsPage/Events";
 import Spinner from "../components/Spinner";
@@ -37,7 +38,13 @@ function EventsPage() {
     fetchLastFiveEvents();
   }, [username]);
 
-  return <>{!isLoading && events ? <Events events={events} /> : <Spinner />}</>;
+  return (
+    <>
+      <div className="events-wrapper">
+        {!isLoading && events ? <Events events={events} /> : <Spinner />}
+      </div>
+    </>
+  );
 }
 
 export default EventsPage;

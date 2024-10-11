@@ -6,6 +6,8 @@ import Root from "./routes/Root.jsx";
 import UserPage from "./routes/UserPage.jsx";
 import ReposPage from "./routes/ReposPage.jsx";
 import EventsPage from "./routes/EventsPage.jsx";
+import HistoryPage from "./routes/HistoryPage.jsx";
+import AboutPage from "./routes/AboutPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
         path: "/users/:username/events",
         element: <EventsPage />,
       },
+      {
+        path: "/history",
+        element: <HistoryPage />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
+      },
     ],
   },
 ]);
@@ -36,6 +46,7 @@ createRoot(document.getElementById("root")).render(
 /* To-do
   - Breadcrumbs on top of Root page outlet
   - Implement debounced fetch
+  - Implement search history
   - Error handling (context)
   - global isLoading state (context)
   - Pagination as a component
