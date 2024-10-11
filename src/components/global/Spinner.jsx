@@ -1,4 +1,4 @@
-import "../styles/Spinner.css";
+import "../../styles/global/Spinner.css";
 import { CgSpinnerTwo } from "react-icons/cg";
 
 function Spinner() {

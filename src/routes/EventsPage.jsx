@@ -1,7 +1,7 @@
 import "../styles/eventsPage/EventsPage.css";
 import { useEffect, useState } from "react";
 import Events from "../components/eventsPage/Events";
-import Spinner from "../components/Spinner";
+import Spinner from "../components/global/Spinner";
 import { useParams } from "react-router-dom";
 
 function EventsPage() {

@@ -1,9 +1,9 @@
 import "../styles/reposPage/ReposPage.css";
 import { useEffect, useState } from "react";
 import Repositories from "../components/reposPage/Repositories";
-import Spinner from "../components/Spinner";
+import Spinner from "../components/global/Spinner";
+import Pagination from "../components/global/Pagination";
 import { useNavigate, useParams } from "react-router-dom";
-import { IoChevronBackOutline, IoChevronForwardOutline } from "react-icons/io5";
 
 function ReposPage() {
   const { username, page } = useParams();
@@ -37,8 +37,6 @@ function ReposPage() {
   const reposPerPage = 6;
   const offset = reposPerPage * (Number(page) - 1);
   const renderedRepos = reposPerPage * Number(page);
-  const prevPage = Number(page) - 1;
-  const nextPage = Number(page) + 1;
 
   useEffect(() => {
     const fetchUserRepositories = async () => {
@@ -68,21 +66,8 @@ function ReposPage() {
     fetchUserRepositories();
   }, [username]);
 
-  const goToPrevPage = () => {
-    navigate(`/users/${username}/repos/${prevPage}`);
-  };
-
-  const goToFirstPage = () => {
-    navigate(`/users/${username}/repos/1`);
-  };
-  const goToLastPage = () => {
-    navigate(
-      `/users/${username}/repos/${Math.ceil(repos.length / reposPerPage)}`
-    );
-  };
-
-  const goToNextPage = () => {
-    navigate(`/users/${username}/repos/${nextPage}`);
+  const handlePageChange = (newPage) => {
+    navigate(`/users/${username}/repos/${newPage}`);
   };
 
   return (
@@ -95,36 +80,11 @@ function ReposPage() {
               repos.length < renderedRepos ? repos.length : renderedRepos
             )}
           />
-          <div className="pagination">
-            <button
-              onClick={goToPrevPage}
-              disabled={page - 1 <= 0}
-              className="previous"
-            >
-              <IoChevronBackOutline size={16} />
-            </button>
-            <button
-              onClick={goToFirstPage}
-              disabled={page == 1}
-              className="first"
-            >
-              1
-            </button>
-            <button
-              onClick={goToLastPage}
-              disabled={page == Math.ceil(repos.length / reposPerPage)}
-              className="last"
-            >
-              {Math.ceil(repos.length / reposPerPage)}
-            </button>
-            <button
-              onClick={goToNextPage}
-              disabled={repos.length < renderedRepos}
-              className="next"
-            >
-              <IoChevronForwardOutline size={16} />
-            </button>
-          </div>
+          <Pagination
+            currentPage={Number(page)}
+            totalPages={Math.ceil(repos.length / reposPerPage)}
+            onPageChange={handlePageChange}
+          />
         </div>
       ) : (
         <Spinner />

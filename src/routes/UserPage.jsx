@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Profile from "../components/userPage/Profile";
-import Spinner from "../components/Spinner";
+import Spinner from "../components/global/Spinner";
 
 function UserPage() {
   const { username } = useParams();
