@@ -20,5 +20,5 @@
 }
 
 .custom-link.active {
-  background: var(--primary);
+  background: var(--active);
 }

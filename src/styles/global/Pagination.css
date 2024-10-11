@@ -12,11 +12,16 @@
 
   padding: 1rem;
   font-size: 1rem;
+  font-weight: 500;
 
   border: none;
   background: var(--dark-grey);
 
   cursor: pointer;
+}
+
+.pagination button.active {
+  background: var(--active);
 }
 
 .pagination button:disabled {
@@ -25,6 +30,10 @@
 
 .pagination button:not(:disabled):hover {
   background: var(--light-grey);
+}
+
+.pagination .one-page {
+  border-radius: 0.5rem;
 }
 
 .pagination .previous {

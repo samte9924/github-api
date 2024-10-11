@@ -56,4 +56,5 @@ createRoot(document.getElementById("root")).render(
   - Better router structure (?)
   - README file
   - Move pagination description from ReposPage.jsx to its README section
+  - Add aria-labels
 */
