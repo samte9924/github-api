@@ -5,15 +5,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
   const prevPage = currentPage - 1;
   const nextPage = currentPage + 1;
 
-  if (totalPages === 1) {
-    return (
-      <div className="pagination">
-        <button disabled className="one-page">
-          1
-        </button>
-      </div>
-    );
-  }
+  if (totalPages === 1) return;
 
   return (
     <div className="pagination">

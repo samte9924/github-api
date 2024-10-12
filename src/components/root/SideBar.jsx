@@ -11,7 +11,7 @@ function SideBar() {
         <AiOutlineHome size={24} />
         <span>Home</span>
       </CustomLink>
-      <CustomLink href="/history">
+      <CustomLink href="/history/1">
         <LuHistory size={24} />
         <span>History</span>
       </CustomLink>

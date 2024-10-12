@@ -32,10 +32,6 @@
   background: var(--light-grey);
 }
 
-.pagination .one-page {
-  border-radius: 0.5rem;
-}
-
 .pagination .previous {
   border-radius: 0.5rem;
 

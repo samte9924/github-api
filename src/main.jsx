@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         element: <EventsPage />,
       },
       {
-        path: "/history",
+        path: "/history/:page",
         element: <HistoryPage />,
       },
       {
