@@ -27,6 +27,8 @@ function Breadcrumbs() {
             <span
               onClick={() => navigateToUrl(buildBreadcrumbUrl(index + 1))}
               className="breadcrumb"
+              role="button"
+              tabIndex={0}
             >
               {param}
             </span>

@@ -9,7 +9,10 @@ function CustomLink({ href, children }) {
   return (
     <div
       onClick={() => navigate(href)}
+      onKeyDown={(e) => e.key === "Enter" && navigate(href)}
       className={"custom-link" + (path === href ? " active" : "")}
+      tabIndex={0}
+      role="button"
     >
       {children}
     </div>

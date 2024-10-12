@@ -18,6 +18,7 @@ function NavBar() {
     saveToHistory(username);
     navigate(`/users/${username}`);
   };
+
   return (
     <nav className="root-nav">
       <SearchBar
