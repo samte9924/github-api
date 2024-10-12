@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/users/:username",
+        path: "/users/:username/",
         element: <UserPage />,
       },
       {
@@ -51,7 +51,6 @@ createRoot(document.getElementById("root")).render(
   - global isLoading state (context)
   - Pagination as a component - OK
   - Style Repository.jsx and Events.jsx items
-  - Add card footer
   - Center the spinner
   - Better router structure (?)
   - README file

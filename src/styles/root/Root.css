@@ -24,4 +24,5 @@
 }
 
 .displayed-child {
+  position: relative;
 }
